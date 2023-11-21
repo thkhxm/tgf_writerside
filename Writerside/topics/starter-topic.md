@@ -1,12 +1,16 @@
-# About tgf
+# 关于 tgf
 
-## 项目介绍
+> tgf框架是使用golang开发的一套游戏分布式框架.
+> 
+> 项目采用了[rpcx](https://github.com/smallnest/rpcx )做为底层rpc的通讯,通过consul提供服务注册发现.
+> 
+> 提供了一整套开发工具,并且定义了模块开发规范.
 
-​	tgf框架是使用golang开发的一套游戏分布式框架,支持全球一服.项目采用了rpcx做为底层rpc的通讯,consul提供服务注册发现.定义了一整套的模块开发规范.[开发文档](https://github.com/thkhxm/tgf/tree/develop/doc)
+[示例项目](https://github.com/thkhxm/tgf_example.git)
 
 ## 技术选型
 
-**go1.21.1**
+Golang开发版本:  **1.21.1**
 
 | 技术       | 说明           | 仓库地址                                 |
 | ---------- | -------------- | ---------------------------------------- |
@@ -24,5 +28,4 @@
 | sonic      | json高性能工具 | https://github.com/bytedance/sonic/      |
 
 ## 基础架构图
-
-![image-20230228031100624](http://oss.yamigame.net/picgo/image-20230228031100624.png)
+![img](jiagoutu.png)

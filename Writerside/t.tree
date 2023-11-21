@@ -8,7 +8,7 @@
 
     <toc-element topic="starter-topic.md"/>
     <toc-element topic="Overview.md">
-        <toc-element topic="Starter2.md"/>
     </toc-element>
-    <toc-element topic="Starter.md"/>
+    <toc-element topic="Build-workspace.md"/>
+    <toc-element topic="tutorial.md"/>
 </instance-profile>

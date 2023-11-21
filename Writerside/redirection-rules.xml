@@ -10,4 +10,16 @@
         <description>Created after removal of "Reference" from tgf</description>
         <accepts>Reference.html</accepts>
     </rule>
+    <rule id="eb3793b">
+        <description>Created after removal of "Starter2" from tgf</description>
+        <accepts>Starter2.html</accepts>
+    </rule>
+    <rule id="7d4fd3dd">
+        <description>Created after removal of "Tutorial" from tgf</description>
+        <accepts>Tutorial.html</accepts>
+    </rule>
+    <rule id="7b26a308">
+        <description>Created after removal of "Starter" from tgf</description>
+        <accepts>Starter.html</accepts>
+    </rule>
 </rules>
