@@ -26,5 +26,3 @@
 ## 基础架构图
 
 ![image-20230228031100624](http://oss.yamigame.net/picgo/image-20230228031100624.png)
-
-#### 
