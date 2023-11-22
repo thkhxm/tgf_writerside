@@ -327,6 +327,8 @@ func TestService_Buy(t *testing.T) {
 }
 ```
 完整调用流程图
+
+
 ![basic3](basic_3.png)
 
 
