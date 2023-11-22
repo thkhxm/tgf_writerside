@@ -22,4 +22,12 @@
         <description>Created after removal of "Starter" from tgf</description>
         <accepts>Starter.html</accepts>
     </rule>
+    <rule id="3cb6859e">
+        <description><![CDATA[Created after removal of "<config.md>" from tgf]]></description>
+        <accepts>config.html</accepts>
+    </rule>
+    <rule id="b0ec051">
+        <description>Created after removal of "组件库" from tgf</description>
+        <accepts>组件库.html</accepts>
+    </rule>
 </rules>
