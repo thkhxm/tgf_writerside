@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Client -> Gate: Request
+Gate -> A: Route Service
+A -> B: Rpc
+B -> A: Rpc CallBack
+A -> Gate:Route CallBack
+Gate -> Client: Response
+@enduml
