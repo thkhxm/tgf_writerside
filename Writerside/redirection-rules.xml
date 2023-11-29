@@ -30,4 +30,8 @@
         <description>Created after removal of "组件库" from tgf</description>
         <accepts>组件库.html</accepts>
     </rule>
+    <rule id="52d624e2">
+        <description>Created after removal of "概览" from tgf</description>
+        <accepts>Overview.html</accepts>
+    </rule>
 </rules>
