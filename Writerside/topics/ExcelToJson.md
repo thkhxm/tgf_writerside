@@ -1,6 +1,6 @@
 # ExcelToJson
 
-Excel文件自动转化Json和Golang结构
+Excel文件自动转化Json文件,Golang的.go文件,C#的.cs文件. all in one . 
 
 ## excel讲解
 
@@ -58,6 +58,12 @@ func main() {
 	util.SetExcelToJsonPath("../common/conf/js")
 	//给前端路径也导出一份
 	//util.SetExcelToJsonPath("E:\\unity\\project\\t2\\Assets\\Config\\js")
+	
+	//设置excel导出的unity文件路径
+	util.SetExcelToUnityPath("E:\\unity\\project\\t2\\Assets\\HotFix\\Config")
+	//设置excel导出的unity命名空间
+	util.SetExcelToUnityNamespace("HotFix.Config")
+
 	//开始导出excel
 	util.ExcelExport()
 
