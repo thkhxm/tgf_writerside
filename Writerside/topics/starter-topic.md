@@ -6,10 +6,13 @@
 > 
 > 提供了一整套开发工具,并且定义了模块开发规范.
 
+[项目地址](https://github.com/thkhxm/tgf)  
 [示例项目](https://github.com/thkhxm/tgf_example.git)
 
-## 技术选型
+## 交流群
+QQ群:7400585
 
+## 技术选型
 Golang开发版本:  **1.21.1**
 
 | 技术       | 说明           | 仓库地址                                 |

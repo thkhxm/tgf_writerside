@@ -49,7 +49,7 @@ func main() {
 }
 ```
 
-#### 结果代码
+#### 结果代码 {id="generate-rpc-client-resource"}
 
 生成的`IUserService`代码范例
 ```Go

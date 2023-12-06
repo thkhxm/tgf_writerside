@@ -42,4 +42,12 @@
         <description>Created after removal of "startup-service" from tgf</description>
         <accepts>startup-service.html</accepts>
     </rule>
+    <rule id="3e1bff07">
+        <description>Created after removal of "主动消息推送" from tgf</description>
+        <accepts>push-tutorial.html</accepts>
+    </rule>
+    <rule id="65d99772">
+        <description>Created after removal of "网关教程" from tgf</description>
+        <accepts>gate-tutorial.html</accepts>
+    </rule>
 </rules>

@@ -41,8 +41,11 @@ func (m *Manager) DoLogin(ctx context.Context, account, password string) (errorC
 
 我们需要关注这一行代码:`rpc.SendRPCMessage(ctx, userservice.RegisterUser.New(&usermodels.RegisterUserRequest{UserId: accountModel.UserId}, &rpc.EmptyReply{}))`
 
+使用`rpc.SendRPCMessage`函数发起了一次rpc请求,传入用户的`context`,和生成的rpc请求协议`userservice.RegisterUser`.
 
+> 函数默认返回rpc请求的结果和error.可以根据返回结果处理后续逻辑
 
+更多高级用法可以查看[RPC通讯方式](rpc-request-tutorial.md)文档
 
 
 
