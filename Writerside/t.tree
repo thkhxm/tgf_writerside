@@ -7,11 +7,27 @@
                  start-page="starter-topic.md">
 
     <toc-element topic="starter-topic.md"/>
+    <toc-element topic="develop-standardization.md">
+        <toc-element topic="rpc-standard.md"/>
+        <toc-element topic="api-standard.md"/>
+        <toc-element topic="service-stand.md"/>
+    </toc-element>
     <toc-element topic="Build-workspace.md"/>
     <toc-element topic="tutorial.md"/>
-    <toc-element topic="basic.md"/>
+    <toc-element topic="basic.md">
+        <toc-element topic="startup-gate.md"/>
+        <toc-element topic="startup-service.md"/>
+        <toc-element topic="login-tutorial.md"/>
+        <toc-element topic="client-request.md"/>
+        <toc-element topic="rpc-request.md"/>
+    </toc-element>
+    <toc-element topic="Advanced-Tutorial.md">
+        <toc-element topic="generate-rpc.md"/>
+        <toc-element topic="login-offline.md"/>
+    </toc-element>
     <toc-element topic="config.md"/>
     <toc-element topic="tools.md">
+        <toc-element topic="robot-tutorial.md"/>
         <toc-element topic="weight.md"/>
         <toc-element topic="ExcelToJson.md"/>
     </toc-element>

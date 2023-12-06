@@ -34,4 +34,12 @@
         <description>Created after removal of "概览" from tgf</description>
         <accepts>Overview.html</accepts>
     </rule>
+    <rule id="5211fcb3">
+        <description>Created after removal of "generate-rpc" from tgf</description>
+        <accepts>generate-rpc.html</accepts>
+    </rule>
+    <rule id="d229c0">
+        <description>Created after removal of "startup-service" from tgf</description>
+        <accepts>startup-service.html</accepts>
+    </rule>
 </rules>
