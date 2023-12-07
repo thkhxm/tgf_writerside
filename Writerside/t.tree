@@ -22,6 +22,7 @@
         <toc-element topic="rpc-request.md"/>
     </toc-element>
     <toc-element topic="Advanced-Tutorial.md">
+        <toc-element topic="route-tutorial.md"/>
         <toc-element topic="rpc-request-tutorial.md"/>
         <toc-element topic="context-tutorial.md"/>
         <toc-element topic="generate-rpc.md"/>
