@@ -20,18 +20,20 @@
         <toc-element topic="login-tutorial.md"/>
         <toc-element topic="client-request.md"/>
         <toc-element topic="rpc-request.md"/>
+        <toc-element topic="rpc-request-tutorial.md"/>
+        <toc-element topic="log-tutorial.md"/>
     </toc-element>
     <toc-element topic="Advanced-Tutorial.md">
-        <toc-element topic="rpc-request-tutorial.md"/>
+        <toc-element topic="db-tutorial.md"/>
         <toc-element topic="context-tutorial.md"/>
         <toc-element topic="generate-rpc.md"/>
         <toc-element topic="login-offline.md"/>
+        <toc-element topic="ExcelToJson.md"/>
+        <toc-element topic="robot-tutorial.md"/>
     </toc-element>
     <toc-element topic="config.md"/>
     <toc-element topic="tools.md">
-        <toc-element topic="robot-tutorial.md"/>
         <toc-element topic="weight.md"/>
-        <toc-element topic="ExcelToJson.md"/>
     </toc-element>
     <toc-element topic="Q-A.md"/>
 </instance-profile>
