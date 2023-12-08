@@ -38,8 +38,11 @@ func Startup() {
 `WithGatewayWS("8443", "/tgf", nil)` 注册一个websocket的网关服务,监听`8443`端口,ws目录使用`/tgf`,最后一个为高级特性中的[登录离线钩子](login-offline.md)
 `WithWhiteService("Login")` 注册白名单接口(**无需登录即可调用**),接口名称为`Login`(**api接口函数名称**)
 
+更多网关相关推送方式可以查看
+
+- [推送用户消息](rpc-request-tutorial.md#rpc-tutorial-user)
+
+
 ## 高级特性 {id="startup-gate-top"}
 
 - [登录离线钩子](login-offline.md)
-- [推送用户消息](rpc-request-tutorial.md#rpc-tutorial-user)
-- 
