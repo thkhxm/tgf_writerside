@@ -36,5 +36,8 @@
     <toc-element topic="tools.md">
         <toc-element topic="weight.md"/>
     </toc-element>
+    <toc-element topic="basic-course.md">
+        <toc-element topic="course-1.md"/>
+    </toc-element>
     <toc-element topic="Q-A.md"/>
 </instance-profile>
