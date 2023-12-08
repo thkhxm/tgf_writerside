@@ -50,4 +50,24 @@
         <description>Created after removal of "网关教程" from tgf</description>
         <accepts>gate-tutorial.html</accepts>
     </rule>
+    <rule id="699a78a5">
+        <description>Created after removal of "sss" from tgf</description>
+        <accepts>sss.html</accepts>
+    </rule>
+    <rule id="67330203">
+        <description>Created after removal of "rrr" from tgf</description>
+        <accepts>rrr.html</accepts>
+    </rule>
+    <rule id="60c0b788">
+        <description>Created after removal of "ooo" from tgf</description>
+        <accepts>ooo.html</accepts>
+    </rule>
+    <rule id="612623e3">
+        <description>Created after removal of "ttt" from tgf</description>
+        <accepts>ttt.html</accepts>
+    </rule>
+    <rule id="4e738315">
+        <description>Created after removal of "qqq" from tgf</description>
+        <accepts>qqq.html</accepts>
+    </rule>
 </rules>

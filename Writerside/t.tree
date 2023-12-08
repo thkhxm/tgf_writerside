@@ -37,6 +37,7 @@
         <toc-element topic="weight.md"/>
     </toc-element>
     <toc-element topic="basic-course.md">
+        <toc-element topic="course-2.md" hidden="true"/>
         <toc-element topic="course-1.md"/>
     </toc-element>
     <toc-element topic="Q-A.md"/>

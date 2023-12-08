@@ -2,3 +2,5 @@
     tgf学习系列课程
 
 该系列课程会持续更新,结合视频教程.让大家可以快速的学习,了解tgf框架.
+
+> [B站视频教程合集](https://space.bilibili.com/64497732/channel/seriesdetail?sid=3815364)
