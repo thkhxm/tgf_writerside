@@ -20,10 +20,7 @@ func (s *service) Login(ctx context.Context, args *rpc.Args[*pb.LoginReq], reply
 	res.Error, res.UserId = s.m.DoLogin(ctx, req.Account, req.Password)
 	//登录成功，调用网关同步用户userId
 	if res.Error == 0 {
-		r, e := rpc.SendRPCMessage(ctx, rpc.Login.New(&rpc.LoginReq{
-			UserId:         res.UserId,
-			TemplateUserId: rpc.GetTemplateUserId(ctx),
-		}, &rpc.LoginRes{}))
+		r, e := rpc.UserLogin(ctx, res.UserId)
 		if e != nil {
 			log.DebugTag("login", "user login fail account=%v password=%v code=%v ", req.Account, req.Password, r.ErrorCode)
 			res.Error = uint32(r.ErrorCode)
