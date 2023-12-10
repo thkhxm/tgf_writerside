@@ -16,7 +16,7 @@ type IHallService interface {
 }
 ```
 生成api文件
-: 查看项目文档,在kit项目中创建生成api接口文件脚本
+: 查看[项目文档](generate-rpc.md),在kit项目中创建生成api接口文件脚本
 ```Go
 func main() {
 	//设置导出的golang目录
@@ -81,6 +81,7 @@ func TestHelloWorld(t *testing.T) {
     QQ群:7400585
 
 ## 下期预告
+    逻辑节点间的rpc调用
 
 ## 视频教程
 

@@ -41,6 +41,8 @@
         <toc-element topic="course-2.md"/>
         <toc-element topic="course-3.md"/>
         <toc-element topic="course-4.md"/>
+        <toc-element topic="course-5.md" hidden="true"/>
+        <toc-element topic="course-6.md" hidden="true"/>
     </toc-element>
     <toc-element topic="Q-A.md"/>
 </instance-profile>

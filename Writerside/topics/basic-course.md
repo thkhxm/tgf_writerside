@@ -6,6 +6,8 @@
 1. [TGF框架的特点和功能](course-1.md)
 2. [环境准备和服务创建](course-2.md)
 3. [模拟客户端请求](course-3.md)
+4. [用户登录](course-4.md)
+5. [服务器RPC调用](course-5.md)
 
 
 > [B站视频教程合集](https://space.bilibili.com/64497732/channel/seriesdetail?sid=3815364)  
