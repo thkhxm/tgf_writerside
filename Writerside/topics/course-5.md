@@ -100,7 +100,7 @@ func TestRPCRobot(t *testing.T) {
 
 ## 视频教程
 
-[golang游戏服务器 - tgf系列课程05](https://www.bilibili.com/video/BV1a64y157DQ/)  
+[golang游戏服务器 - tgf系列课程05](https://www.bilibili.com/video/BV1tj411s7co/)  
 [B站教程合集](https://space.bilibili.com/64497732/channel/seriesdetail?sid=3815364)
 
 ## 项目地址
