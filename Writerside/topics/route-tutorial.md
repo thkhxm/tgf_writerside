@@ -1,13 +1,12 @@
 # 路由教程
     路由功能介绍
 
-## 代码示例
-> 代码所在位置:[rpc/plugins.go](https://github.com/thkhxm/tgf/blob/master/rpc/plugins.go)
-
+## 源码 
+代码所在位置:[rpc/plugins.go](https://github.com/thkhxm/tgf/blob/master/rpc/plugins.go)
 ```Go
-func (this *CustomSelector) Select(ctx context.Context, servicePath, serviceMethod string, args interface{}) (selected string) {
+func (c *CustomSelector) Select(ctx context.Context, servicePath, serviceMethod string, args interface{}) (selected string) {
 	if sc, ok := ctx.(*share.Context); ok {
-		size := this.servers.Len()
+		size := c.servers.Len()
 		switch size {
 		case 0:
 			return ""
@@ -26,9 +25,9 @@ func (this *CustomSelector) Select(ctx context.Context, servicePath, serviceMeth
 			if rpcTip == tgf.RPCBroadcastTip {
 				ids := reqMetaData[tgf.ContextKeyBroadcastUserIds]
 				broadcasts = strings.Split(ids, ",")
-				if !this.checkServerAlive(selected) {
+				if !c.checkServerAlive(selected) {
 					key := client2.HashString(fmt.Sprintf("%v", time.Now().UnixNano()))
-					selected, _ = this.h.Get(key).(string)
+					selected, _ = c.h.Get(key).(string)
 				}
 				bindNode = true
 			}
@@ -36,16 +35,16 @@ func (this *CustomSelector) Select(ctx context.Context, servicePath, serviceMeth
 				for _, uid := range broadcasts {
 					var key uint64
 					//先判断携带节点信息是否存活
-					if this.checkServerAlive(selected) {
+					if c.checkServerAlive(selected) {
 						if bindNode {
-							this.processNode(ctx, uid, selected, reqMetaData, servicePath)
+							c.processNode(ctx, uid, selected, reqMetaData, servicePath)
 						}
 						continue
 					}
 
 					//从本地缓存中获取用户的节点数据
-					selected, _ = this.cacheManager.Get(uid)
-					if this.checkServerAlive(selected) {
+					selected, _ = c.cacheManager.Get(uid)
+					if c.checkServerAlive(selected) {
 						continue
 					}
 					//如果上面的用户节点获取，没有命中，那么取当前请求模式
@@ -58,28 +57,28 @@ func (this *CustomSelector) Select(ctx context.Context, servicePath, serviceMeth
 						reqMetaCacheData = make(map[string]string)
 					}
 					selected = reqMetaCacheData[servicePath]
-					if this.checkServerAlive(selected) {
+					if c.checkServerAlive(selected) {
 						//将节点数据，放入本地缓存
 						if reqMetaData[tgf.ContextKeyCloseLocalCache] == "" {
-							this.cacheManager.Set(uid, selected)
+							c.cacheManager.Set(uid, selected)
 						}
 						continue
 					} else {
 						//通过一致性hash的方式,命中一个活跃的业务节点
 						key = client2.HashString(uid)
-						selected, _ = this.h.Get(key).(string)
+						selected, _ = c.h.Get(key).(string)
 						reqMetaData[servicePath] = selected
-						this.processNode(ctx, uid, selected, reqMetaData, servicePath)
+						c.processNode(ctx, uid, selected, reqMetaData, servicePath)
 					}
 				}
 			} else {
-				if this.checkServerAlive(selected) {
-					key := client2.HashString(fmt.Sprintf("%v", time.Now().Unix()))
-					selected, _ = this.h.Get(key).(string)
+				if c.checkServerAlive(selected) {
+					//key := client2.HashString(fmt.Sprintf("%v", time.Now().Unix()))
+					//selected, _ = c.h.Get(key).(string)
 					return
 				}
 				key := client2.HashString(fmt.Sprintf("%v", time.Now().UnixNano()))
-				selected, _ = this.h.Get(key).(string)
+				selected, _ = c.h.Get(key).(string)
 			}
 			return
 		}
@@ -87,11 +86,11 @@ func (this *CustomSelector) Select(ctx context.Context, servicePath, serviceMeth
 
 	return ""
 }
-func (this *CustomSelector) processNode(ctx context.Context, uid string, selected string, reqMetaData map[string]string, servicePath string) {
+func (c *CustomSelector) processNode(ctx context.Context, uid string, selected string, reqMetaData map[string]string, servicePath string) {
 	reqMetaDataKeyTemp := fmt.Sprintf(tgf.RedisKeyUserNodeMeta, uid)
 	db.PutMap(reqMetaDataKeyTemp, servicePath, selected, reqMetaDataTimeout)
 	if reqMetaData[tgf.ContextKeyCloseLocalCache] == "" {
-		this.cacheManager.Set(uid, selected)
+		c.cacheManager.Set(uid, selected)
 	}
 	if UploadUserNodeInfo.ModuleName != servicePath {
 		util.Go(func() {
@@ -106,4 +105,4 @@ func (this *CustomSelector) processNode(ctx context.Context, uid string, selecte
 	}
 }
 ```
-
+{collapsible="true"}

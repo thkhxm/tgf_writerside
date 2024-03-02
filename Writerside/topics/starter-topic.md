@@ -7,7 +7,7 @@
 
     开发者只需要关注业务逻辑即可,无需关心用户并发和节点状态等复杂情况.
 
-
+[API](https://pkg.go.dev/github.com/thkhxm/tgf)
 [项目地址](https://github.com/thkhxm/tgf)  
 [项目文档](https://thkhxm.github.io/tgf_writerside/starter-topic.html)
 [知乎博客](https://www.zhihu.com/people/tim-30-83/posts)  
@@ -19,7 +19,7 @@
     QQ群:7400585
 
 ## 技术选型
-    Golang开发版本:  1.21.1
+    Golang开发版本:  1.22
 
 | 技术       | 说明           | 仓库地址                                 |
 | ---------- | -------------- | ---------------------------------------- |

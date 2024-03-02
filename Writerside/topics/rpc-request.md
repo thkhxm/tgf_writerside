@@ -2,7 +2,7 @@
 s2s rpc请求
 ## 代码范例
 
-### 注册一个接口
+### RPC接口
 ```Go
 func (s *service) GetBattleUserData(ctx context.Context, args *usermodels.LoadBattleUserRequest, reply *usermodels.LoadBattleUserResponse) (err error) {
     //do something
@@ -12,7 +12,7 @@ func (s *service) GetBattleUserData(ctx context.Context, args *usermodels.LoadBa
 
 ### 调用接口
 
-我们通过[生成协议接口](generate-rpc.md)工具得到服务器rpc协议请求的结构化代码. `userservice.RegisterUser`
+我们通过[生成协议接口](generate-rpc.md)工具得到服务器rpc协议请求的结构化代码. `user_service.RegisterUser`
 
 我们模拟登陆成功之后,调用注册用户的rpc请求,以下是逻辑伪代码:
 ```Go
@@ -39,7 +39,11 @@ func (m *Manager) DoLogin(ctx context.Context, account, password string) (errorC
 }
 ```
 
-我们需要关注这一行代码:`rpc.SendRPCMessage(ctx, userservice.RegisterUser.New(&usermodels.RegisterUserRequest{UserId: accountModel.UserId}, &rpc.EmptyReply{}))`
+关注这一行代码
+:
+```Go
+`rpc.SendRPCMessage(ctx, userservice.RegisterUser.New(&usermodels.RegisterUserRequest{UserId: accountModel.UserId}, &rpc.EmptyReply{}))`
+```
 
 使用`rpc.SendRPCMessage`函数发起了一次rpc请求,传入用户的`context`,和生成的rpc请求协议`userservice.RegisterUser`.
 

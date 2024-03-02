@@ -32,9 +32,9 @@ import (
 
 func Startup() {
 	c := rpc.NewRPCServer(). //创建一个rpc服务
-					WithGatewayWS("8032", "/example",nil). //启动一个网关
+					WithGatewayWS("8032", "/example"). //启动一个网关
 					WithService(&HallService{}).       //启动一个service的服务
-					WithWhiteService("SayHello").      //添加该rpc到白名单,无需登录即可访问
+					WithWhiteService("hall.SayHello").      //添加该rpc到白名单,无需登录即可访问
 					WithCache(tgf.CacheModuleClose).   //关闭redis等缓存服务
 					Run()
 	select {
@@ -43,8 +43,6 @@ func Startup() {
 
 	}
 }
-
-var hallservice_check rpc.IService = &HallService{}
 
 // HallService
 // @Description: implements rpc.IService
@@ -63,7 +61,7 @@ func (h *HallService) GetName() string {
 }
 
 func (h *HallService) GetVersion() string {
-	return "v1.0"
+	return "1.0"
 }
 
 func (h *HallService) Startup() (bool, error) {

@@ -5,3 +5,6 @@
 
 rpcx.Register: type dungeon has no exported methods of suitable type
 : 这是因为您的service没有可用的接口导致,只需要定义一个空的接口即可.
+: ```Go
+func (g *Service) Empty(ctx context.Context, args *string, reply *string) error
+```

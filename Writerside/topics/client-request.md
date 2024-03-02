@@ -2,7 +2,7 @@
  c2s的请求文档
 
 ## 代码范例
-### 注册接口
+### 接口函数
 ```Go
 func (s *service) BuyItem(ctx context.Context, args *rpc.Args[*pb.BuyItemReq], reply *rpc.Reply[*pb.BuyItemRes]) (err error) {
     //获取用户的userId
