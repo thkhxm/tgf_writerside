@@ -6,10 +6,13 @@
 
 ```Go
 type IUserRPCService interface {
-	GetUserData(ctx context.Context, args *usermodels.LoadLoginUserRequest, reply *usermodels.LoadLoginUserResponse) (err error)
-	RegisterUser(ctx context.Context, args *usermodels.RegisterUserRequest, reply *rpc.EmptyReply) (err error)
+	GetUserData(ctx context.Context, args *user_param.LoadLoginUserArgs, reply *user_param.LoadLoginUserReply) (err error)
 }
 ```
+
+## 命名规范
+
+    接口参数的命名, 一般使用Args结尾来表示入参,Reply结尾表示响应结果. rpc相关的参数,我们会在param文件夹中创建.
 
 ## 结构说明
 

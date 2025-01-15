@@ -13,13 +13,14 @@
 [知乎博客](https://www.zhihu.com/people/tim-30-83/posts)  
 [CSDN专栏](https://blog.csdn.net/thkhxm/category_12520142.html)  
 [B站教程](https://space.bilibili.com/64497732/channel/seriesdetail?sid=3815364)  
+[Jetbrains插件](https://plugins.jetbrains.com/plugin/26306-tgf)
 
 
 ## 交流群
     QQ群:7400585
 
 ## 技术选型
-    Golang开发版本:  1.22
+    Golang开发版本:  1.23
 
 | 技术       | 说明           | 仓库地址                                 |
 | ---------- | -------------- | ---------------------------------------- |

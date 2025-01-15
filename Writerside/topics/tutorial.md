@@ -9,6 +9,17 @@
 go get -u github.com/thkhxm/tgf
 ```
 
+## 指定版本
+    修改项目的go.mod文件,或者go.work文件.手动指定版本(推荐使用go.work管理项目)
+```gomodule
+replace (
+	github.com/rpcxio/rpcx-consul  => github.com/thkhxm/rpcx-consul v1.0.1
+	github.com/smallnest/rpcx  => github.com/thkhxm/rpcx v1.0.6
+	github.com/go-echarts/go-echarts/v2  => github.com/go-echarts/go-echarts/v2 v2.2.3
+	github.com/alitto/pond => 	github.com/alitto/pond v1.8.3
+)
+```
+
 ## 创建service服务
 ```Go
 package quick_start
